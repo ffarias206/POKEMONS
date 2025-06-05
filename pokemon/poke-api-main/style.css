@@ -1,0 +1,117 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1f5483;
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    text-align: center;
+    padding: 50px 20px;
+    color: #000000; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input#search {
+    padding: 15px 25px;
+    font-size: 20px;
+    border: 2px solid #47acff;
+    border-radius: 25px 0 0 25px; 
+    width: 300px;
+    max-width: 80vw;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input#search:focus {
+    border-color: #47acff; /* OrangeRed color on focus */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 0 25px 25px 0; /* Rounded corners */
+    background-color: #1c74bd; /* Tomato color */
+    color: #464141;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2f5688; 
+    transform: scale(1.05); 
+}
+
+#pokemon-info {
+    background: rgba(255, 255, 255, 0.8); 
+    margin-top: 40px;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 90vw;
+}
+
+#pokemon-info h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #1a6ea7; 
+}
+
+#pokemon-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#pokemon-info img {
+    width: 60%;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+#pokemon-info img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    input#search {
+        width: 220px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    #pokemon-info {
+        padding: 20px 15px;
+    }
+
+    #pokemon-info h1 {
+        font-size: 2rem;
+    }
+
+    #pokemon-info h2 {
+        font-size: 1.2rem;
+    }
+
+    #pokemon-info img {
+        width: 70%;
+        max-width: 200px;
+    }
+}
+
+
